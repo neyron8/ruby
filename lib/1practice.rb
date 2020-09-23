@@ -80,7 +80,7 @@ class Converter
   end
 end
 
-obj = Converter.new
+# obj = Converter.new
 # obj.temperature = 0.0
 # p obj.cels_to_scale('F')
 # puts obj.isValidTemperature?('12')
