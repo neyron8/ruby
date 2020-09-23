@@ -21,11 +21,7 @@ class Converter
   end
 
   def valid_temperature?(temperature)
-    @temperature = begin
-                     Float(temperature)
-                   rescue StandardError
-                     false
-                   end
+    @temperature = begin Float(temperature) rescue StandardError false end
   end
 
   def convert
