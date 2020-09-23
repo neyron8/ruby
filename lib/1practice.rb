@@ -17,24 +17,24 @@ class Converter
                    end
   end
 
-  def getFirstScale
+  def set_first_scale
     puts 'Введите название шкалы (С, K, F) '
     @scale_f = gets
     @scale_f.chomp!
   end
 
-  def getSecondScale
+  def set_second_scale
     puts 'Введите название шкалы в которую нужно перевести (С, K, F) '
     @scale_s = gets
     @scale_s.chomp!
   end
 
   def convert
-    getTemperature
+    set_temperature
     abort 'Invalid temperature' unless valid_temperature?(@temperature)
-    getFirstScale
+    set_first_scale
     abort "Invalid scale '#{@scale_f}' " unless valid_scale?(@scale_f)
-    getSecondScale
+    set_second_scale
     abort "Invalid scale '#{@scale_s}' " unless valid_scale?(@scale_s)
     @temperature = transfToScale(@scale_f, @scale_s, @temperature)
     puts "Result is #{@temperature}"
