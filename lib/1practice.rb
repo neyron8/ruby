@@ -1,5 +1,5 @@
 class Converter
-  def get_temperature
+  def set_temperature
     puts 'Введите температуру '
     @temperature = gets
     @temperature.chomp!
@@ -9,40 +9,35 @@ class Converter
     %w[C F K].include? scale
   end
 
-  def is_Valid_Temperature?(temperature)
+  def valid_temperature?(temperature)
     @temperature = begin
                      Float(temperature)
                    rescue StandardError
                      false
                    end
-    # puts @temperature
   end
 
   def getFirstScale
     puts 'Введите название шкалы (С, K, F) '
     @scale_f = gets
     @scale_f.chomp!
-    # j = isValidScale?
   end
 
   def getSecondScale
     puts 'Введите название шкалы в которую нужно перевести (С, K, F) '
     @scale_s = gets
     @scale_s.chomp!
-    # j = isValidScale?
   end
 
   def convert
     getTemperature
-    abort 'Invalid temperature' unless is_Valid_Temperature?(@temperature)
+    abort 'Invalid temperature' unless valid_temperature?(@temperature)
     getFirstScale
     abort "Invalid scale '#{@scale_f}' " unless valid_scale?(@scale_f)
     getSecondScale
     abort "Invalid scale '#{@scale_s}' " unless valid_scale?(@scale_s)
     @temperature = transfToScale(@scale_f, @scale_s, @temperature)
     puts "Result is #{@temperature}"
-    # @temperature+= 10
-    # puts @temperature
   end
 
   def transfToScale(scale_f, scale_s, temperature)
