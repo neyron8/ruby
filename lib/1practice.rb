@@ -5,7 +5,7 @@ class Converter
     @temperature.chomp!
   end
 
-  def is_Valid_Scale?(scale)
+  def valid_scale?(scale)
     %w[C F K].include? scale
   end
 
@@ -36,9 +36,9 @@ class Converter
     getTemperature
     abort 'Invalid temperature' unless is_Valid_Temperature?(@temperature)
     getFirstScale
-    abort "Invalid scale '#{@scale_f}' " unless is_Valid_Scale?(@scale_f)
+    abort "Invalid scale '#{@scale_f}' " unless valid_scale?(@scale_f)
     getSecondScale
-    abort "Invalid scale '#{@scale_s}' " unless is_Valid_Scale?(@scale_s)
+    abort "Invalid scale '#{@scale_s}' " unless valid_scale?(@scale_s)
     @temperature = transfToScale(@scale_f, @scale_s, @temperature)
     puts "Result is #{@temperature}"
     # @temperature+= 10
