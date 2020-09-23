@@ -1,5 +1,5 @@
 class Converter
-  def getTemperature
+  def get_temperature
     puts 'Введите температуру '
     @temperature = gets
     @temperature.chomp!
@@ -34,7 +34,7 @@ class Converter
 
   def convert
     getTemperature
-    abort "Invalid temperature '#{@temperature}' " unless isValidTemperature?(@temperature)
+    abort 'Invalid temperature' unless isValidTemperature?(@temperature)
     getFirstScale
     abort "Invalid scale '#{@scale_f}' " unless isValidScale?(@scale_f)
     getSecondScale
