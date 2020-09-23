@@ -1,7 +1,7 @@
 AllCops:
   NewCops: enable
   Exclude:
-    - 'spec/'
+    - './spec/'
 
 Style/Documentation:
   Enabled: false
