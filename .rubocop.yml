@@ -1,7 +1,7 @@
 AllCops:
   NewCops: enable
   Exclude:
-    - './spec/'
+    - 'spec/test1_spec.rb'
 
 Style/Documentation:
   Enabled: false
