@@ -43,6 +43,7 @@ class Converter
     abort "Invalid scale '#{obj.scale_s}' " unless valid_scale?(obj.scale_s)
     temperature = convert_to_scale(obj)
     puts "Result is #{temperature}"
+    temperature
   end
 
   def cels_to_scale(scale_s, temperature)
@@ -90,8 +91,17 @@ class Converter
   end
 end
 
-# obj = Converter.new
-# p obj.valid_temperature?('120a')
+class Calculate
+  def calculate
+    obj = Input.new
+    conv = Converter.new
+    obj.set_variables
+    conv.convert(obj)
+  end
+end
 
-# obj = Calculate.new
-# obj.calculate
+ # obj = Converter.new
+ #p obj.valid_temperature?('120a')
+
+ # obj = Calculate.new
+ # obj.calculate

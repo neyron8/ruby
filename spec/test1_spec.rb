@@ -51,4 +51,14 @@ RSpec.describe Converter do
       expect(obj.cels_to_scale('F', 50)).to eq(122.0)
     end
   end
+  describe '#Valid convertation(object)' do
+	it '12 K to C' do
+		# obj = Converter.new
+		# obj.temperature = 12
+		in = Input.new
+		in.temperature = 120;
+		in.scale_f = 'C'
+		in.scale_s = 'C'
+		expect(obj.convert(in)).to eq(120.0)
+    end
 end
