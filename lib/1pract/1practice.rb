@@ -90,8 +90,6 @@ class Converter
   end
 end
 
-
-
 # obj = Converter.new
 # p obj.valid_temperature?('120a')
 
