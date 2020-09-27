@@ -29,9 +29,12 @@ class Converter
   end
 
   def valid_temperature?(temperature)
-    reg_digit = '^[-]?[0-9]*[.]?[0-9]+$'
-    false unless temperature.to_s.match(reg_digit)
-    true
+    reg_digit = '^[+-]?([1-9]\d*|0)(\.\d+)?$'
+    if temperature.to_s.match(reg_digit)
+      true
+    else
+      false
+    end
   end
 
   def convert(obj)
@@ -95,6 +98,9 @@ class Calculate
     conv.convert(obj)
   end
 end
+
+# obj = Converter.new
+# p obj.valid_temperature?('120a')
 
 # obj = Calculate.new
 # obj.calculate
