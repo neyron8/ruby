@@ -31,23 +31,23 @@ RSpec.describe Computing do
 	describe '#Valid dispersion' do
 		it "Operation 1 - true" do
 			# obj = Converter.new
-			expect(obj.valid_operation?(1).to eq(true)
+			expect(obj.valid_operation?(1)).to eq(true)
 		end
 		it "Operation 2 - true" do
 			# obj = Converter.new
-			expect(obj.valid_operation?(2).to eq(true)
+			expect(obj.valid_operation?(2)).to eq(true)
 		end
 		it "Operation 3 - true" do
 			# obj = Converter.new
-			expect(obj.valid_operation?(3).to eq(true)
+			expect(obj.valid_operation?(3)).to eq(true)
 		end
 		it "Operation 4 - true" do
 			# obj = Converter.new
-			expect(obj.valid_operation?(4).to eq(true)
+			expect(obj.valid_operation?(4)).to eq(true)
 		end
 		it "Operation 5 - true" do
 			# obj = Converter.new
-			expect(obj.valid_operation?(4).to eq(false)
+			expect(obj.valid_operation?(4)).to eq(false)
 		end
 	end
 end
