@@ -1,12 +1,12 @@
-require './input'
-require './2practice'
+require './lib/2pract/input.rb'
+require './lib/2pract/2practice'
 
 # Final class
 class Calculate
   def calculate
     obj = Input.new
     comp = Computing.new
-    p comp.valid_file?('ruby.csv')
+    comp.valid_file?('ruby.csv')
     comp.computing_operation(obj.choose_operation, 'ruby.csv')
   end
 end

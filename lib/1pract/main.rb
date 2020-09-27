@@ -1,5 +1,5 @@
-require './input'
-require './1practice'
+require './lib/1pract/input'
+require './lib/1pract/1practice'
 
 class Calculate
   def calculate
