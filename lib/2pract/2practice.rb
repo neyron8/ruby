@@ -2,6 +2,7 @@
 
 require 'csv'
 require './lib/2pract/input'
+# require './input' for checking program(not tests)
 
 # Comp operations
 class Computing
