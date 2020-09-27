@@ -1,26 +1,7 @@
 # frozen_string_literal: true
 
 require 'csv'
-
-# Input class
-class Input
-  def valid_file?(name)
-    File.exist?(name)
-  end
-
-  def choose_operation
-    puts '1-Min, 2-Max, 3-Average, 4-Dispersion'
-    puts 'Type number of operation: '
-    @operation = gets.chomp!
-    # @operation.chomp!
-    abort "Invalid operation number '#{@operation}' " unless valid_operation?(@operation)
-    @operation
-  end
-
-  def valid_operation?(operation)
-    %w[1 2 3 4].include? operation
-  end
-end
+require './lib/2pract/input'
 
 # Comp operations
 class Computing
@@ -64,6 +45,7 @@ class Computing
   end
 
   def computing_operation(operation, name)
+    abort "Invalid operation number '#{operation}' " unless valid_operation?(operation)
     case operation
     when '1'
       comp_min(name)
@@ -75,15 +57,13 @@ class Computing
       comp_dispers(name)
     end
   end
-end
 
-# Final class
-class Calculate
-  def calculate
-    obj = Input.new
-    comp = Computing.new
-    obj.valid_file?('ruby.csv')
-    comp.computing_operation(obj.get_operation, 'ruby.csv')
+  def valid_operation?(operation)
+    %w[1 2 3 4].include? operation
+  end
+
+  def valid_file?(name)
+    File.exist?(name)
   end
 end
 
