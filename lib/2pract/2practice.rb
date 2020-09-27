@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'csv'
-require './lib/2pract/input'
+require './input'
 
 # Comp operations
 class Computing

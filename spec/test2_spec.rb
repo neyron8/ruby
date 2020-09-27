@@ -6,8 +6,8 @@ RSpec.describe Computing do
 	obj = Computing.new
 	describe '#Valid file' do
 		it "Checking 'ruby.csv' - true" do
-		# obj = Converter.new
-		expect(obj.valid_file?('ruby.csv')).to eq(true)
+			# obj = Converter.new
+			expect(obj.valid_file?('ruby.csv')).to eq(true)
 		end
 	end
 end
