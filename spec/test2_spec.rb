@@ -51,21 +51,21 @@ RSpec.describe Computing do
 		end
 	end
 	describe '#Valid computing operation' do
-		it "Dispers - true" do
+		it "Min " do
 			# obj = Converter.new
 			expect(obj.computing_operation('1', './lib/2pract/ruby.csv')).to eq(6.1)
 		end
-		it "Dispers - true" do
+		it "Max" do
 			# obj = Converter.new
-			expect(obj.computing_operation('2', './lib/2pract/ruby.csv')).to eq(6.1)
+			expect(obj.computing_operation('2', './lib/2pract/ruby.csv')).to eq(12.5)
 		end
-		it "Dispers - true" do
+		it "Average" do
 			# obj = Converter.new
-			expect(obj.computing_operation('3', './lib/2pract/ruby.csv')).to eq(6.1)
+			expect(obj.computing_operation('3', './lib/2pract/ruby.csv')).to eq(8.23)
 		end
-		it "Dispers - true" do
+		it "Dispers" do
 			# obj = Converter.new
-			expect(obj.computing_operation('4', './lib/2pract/ruby.csv')).to eq(6.1)
+			expect(obj.computing_operation('4', './lib/2pract/ruby.csv')).to eq(2.98)
 		end
 	end
 end
