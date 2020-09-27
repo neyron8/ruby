@@ -2,6 +2,7 @@ require './lib/1pract/1practice'
 
 RSpec.describe Converter do
   obj = Converter.new
+  inp = Input.new
   describe '#Valid Scale' do
     it "Checking 'C' - true" do
       # obj = Converter.new
@@ -55,7 +56,6 @@ RSpec.describe Converter do
 	it '12 K to C' do
 		# obj = Converter.new
 		# obj.temperature = 12
-		inp = Input.new
 		inp.temperature = 120;
 		inp.scale_f = 'C'
 		inp.scale_s = 'C'
