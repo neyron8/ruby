@@ -1,4 +1,4 @@
-require './input'
+require './lib/1pract/input'
 
 class Converter
   def valid_scale?(scale)
