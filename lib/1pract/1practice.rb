@@ -1,4 +1,4 @@
-require './input'
+require './input.rb'
 
 class Converter
   def valid_scale?(scale)
