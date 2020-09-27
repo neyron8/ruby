@@ -1,4 +1,4 @@
-require './lib/2pract/input.rb'
+require './lib/2pract/input'
 require './lib/2pract/2practice'
 
 # Final class
