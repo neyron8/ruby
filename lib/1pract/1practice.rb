@@ -87,17 +87,14 @@ class Converter
   end
 end
 
-def calculate
-  obj = Input.new
-  conv = Converter.new
-  obj.set_variables
-  conv.convert(obj)
+class Calculate
+  def calculate
+    obj = Input.new
+    conv = Converter.new
+    obj.set_variables
+    conv.convert(obj)
+  end
 end
 
-calculate
-# obj = Converter.new
-# obj.temperature = 0.0
-# p obj.cels_to_scale('F')
-# puts obj.isValidTemperature?('12')
-# obj.convert
-# puts obj.transfToScale('C', 'F', 50)
+# obj = Calculate.new
+# obj.calculate
