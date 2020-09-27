@@ -62,10 +62,6 @@ class Computing
   def valid_operation?(operation)
     %w[1 2 3 4].include? operation
   end
-
-  def valid_file?(name)
-    File.exist?(name)
-  end
 end
 
 # obj = Calculate.new
