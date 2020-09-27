@@ -19,35 +19,35 @@ RSpec.describe Computing do
 	describe '#Valid min' do
 		it "Min  - true" do
 			# obj = Converter.new
-			expect(obj.comp_min('./lib/2pract/ruby.csv')).to eq(8.21)
+			expect(obj.comp_min('./lib/2pract/ruby.csv')).to eq(6.1)
 		end
 	end
 	describe '#Valid dispersion' do
 		it "Dispers - true" do
 			# obj = Converter.new
-			expect(obj.comp_dispers('./lib/2pract/ruby.csv')).to eq(8.21)
+			expect(obj.comp_dispers('./lib/2pract/ruby.csv')).to eq(2.98)
 		end
 	end
 	describe '#Valid dispersion' do
 		it "Operation 1 - true" do
 			# obj = Converter.new
-			expect(obj.valid_operation?(1)).to eq(true)
+			expect(obj.valid_operation?('1')).to eq(true)
 		end
 		it "Operation 2 - true" do
 			# obj = Converter.new
-			expect(obj.valid_operation?(2)).to eq(true)
+			expect(obj.valid_operation?('2')).to eq(true)
 		end
 		it "Operation 3 - true" do
 			# obj = Converter.new
-			expect(obj.valid_operation?(3)).to eq(true)
+			expect(obj.valid_operation?('3')).to eq(true)
 		end
 		it "Operation 4 - true" do
 			# obj = Converter.new
-			expect(obj.valid_operation?(4)).to eq(true)
+			expect(obj.valid_operation?('4')).to eq(true)
 		end
 		it "Operation 5 - true" do
 			# obj = Converter.new
-			expect(obj.valid_operation?(4)).to eq(false)
+			expect(obj.valid_operation?('5')).to eq(false)
 		end
 	end
 end
