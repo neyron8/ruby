@@ -55,10 +55,10 @@ RSpec.describe Converter do
 	it '12 K to C' do
 		# obj = Converter.new
 		# obj.temperature = 12
-		in = Input.new
-		in.temperature = 120;
-		in.scale_f = 'C'
-		in.scale_s = 'C'
-		expect(obj.convert(in)).to eq(120.0)
+		inp = Input.new
+		inp.temperature = 120;
+		inp.scale_f = 'C'
+		inp.scale_s = 'C'
+		expect(obj.convert(inp)).to eq(120.0)
     end
 end
