@@ -3,7 +3,7 @@ class Input
 
   def set_temperature
     puts 'Введите температуру '
-    @temperature = gets.chomp.to_f
+    @temperature = gets.chomp!
   end
 
   def set_first_scale

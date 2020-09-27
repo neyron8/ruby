@@ -1,8 +1,8 @@
-require './lib/1pract/input'
-require './lib/1pract/1practice'
+require './lib/1pract/input' # for tests
+require './lib/1pract/1practice' # for tests
 
-# require './input' for checking program(not tests)
-# require './1practice' for checking program(not tests)
+# require './input' # for checking program(not tests)
+# require './1practice' # for checking program(not tests)
 
 class Calculate
   def calculate
@@ -15,3 +15,7 @@ end
 
 obj = Calculate.new
 obj.calculate
+# ob = Converter.new
+# ob1 = Input.new
+# ob1.temperature = gets.chomp!
+# p ob.valid_temperature?(ob1.temperature)

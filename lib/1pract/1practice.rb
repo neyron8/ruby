@@ -1,5 +1,5 @@
-require './lib/1pract/input'
-# require './input' for checking program(not tests)
+require './lib/1pract/input' # for tests
+# require './input' # for checking program(not tests)
 
 class Converter
   def valid_scale?(scale)
@@ -25,33 +25,33 @@ class Converter
   def cels_to_scale(scale_s, temperature)
     case scale_s
     when 'C'
-      temperature
+      temperature.to_f
     when 'F'
-      (temperature * 1.8 + 32)
+      (temperature.to_f * 1.8 + 32)
     else
-      (temperature + 273.15)
+      (temperature.to_f + 273.15)
     end
   end
 
   def fars_to_scale(scale_s, temperature)
     case scale_s
     when 'C'
-      (temperature - 32) / 1.8
+      (temperature.to_f - 32) / 1.8
     when 'F'
-      temperature
+      temperature.to_f
     else
-      (temperature - 32) / 1.8 + 273.15
+      (temperature.to_f - 32) / 1.8 + 273.15
     end
   end
 
   def kelvins_to_scale(scale_s, temperature)
     case scale_s
     when 'C'
-      temperature - 273.15
+      temperature.to_f - 273.15
     when 'F'
-      1.8 * (temperature - 273.15) + 32
+      1.8 * (temperature.to_f - 273.15) + 32
     else
-      temperature
+      temperature.to_f
     end
   end
 
