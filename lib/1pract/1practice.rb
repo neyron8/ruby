@@ -100,8 +100,8 @@ class Calculate
   end
 end
 
- # obj = Converter.new
- #p obj.valid_temperature?('120a')
+# obj = Converter.new
+# p obj.valid_temperature?('120a')
 
- # obj = Calculate.new
- # obj.calculate
+# obj = Calculate.new
+# obj.calculate
