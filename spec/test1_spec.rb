@@ -15,11 +15,15 @@ RSpec.describe Converter do
   describe '#Valid Temperature' do
     it "Checking '120' - 120.0" do
       # obj = Converter.new
-      expect(obj.valid_temperature?('120')).to eq(120.0)
+      expect(obj.valid_temperature?('120')).to eq(true)
     end
     it "Checking 'q12' - false" do
       # obj = Converter.new
       expect(obj.valid_temperature?('q12')).to eq(false)
+    end
+	it "Checking 'q12' - false" do
+      # obj = Converter.new
+      expect(obj.valid_temperature?('300')).to eq(true)
     end
   end
   describe '#Valid convertation' do
