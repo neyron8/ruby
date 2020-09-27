@@ -1,4 +1,4 @@
-require '../lib/1practice_spec'
+require '../lib/1pract/1practice.rb'
 
 RSpec.describe Converter do
   obj = Converter.new
