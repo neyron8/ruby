@@ -90,14 +90,7 @@ class Converter
   end
 end
 
-class Calculate
-  def calculate
-    obj = Input.new
-    conv = Converter.new
-    obj.set_variables
-    conv.convert(obj)
-  end
-end
+
 
 # obj = Converter.new
 # p obj.valid_temperature?('120a')
