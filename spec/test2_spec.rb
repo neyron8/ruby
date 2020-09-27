@@ -13,7 +13,7 @@ RSpec.describe Computing do
 	describe '#Valid average' do
 		it "Average - true" do
 			# obj = Converter.new
-			expect(obj.comp_average('./lib/2pract/ruby.csv')).to eq(8.21)
+			expect(obj.comp_average('./lib/2pract/ruby.csv')).to eq(8.23)
 		end
 	end
 	describe '#Valid min' do
@@ -48,6 +48,24 @@ RSpec.describe Computing do
 		it "Operation 5 - true" do
 			# obj = Converter.new
 			expect(obj.valid_operation?('5')).to eq(false)
+		end
+	end
+	describe '#Valid computing operation' do
+		it "Dispers - true" do
+			# obj = Converter.new
+			expect(obj.computing_operation('1', './lib/2pract/ruby.csv')).to eq(6.1)
+		end
+		it "Dispers - true" do
+			# obj = Converter.new
+			expect(obj.computing_operation('2', './lib/2pract/ruby.csv')).to eq(6.1)
+		end
+		it "Dispers - true" do
+			# obj = Converter.new
+			expect(obj.computing_operation('3', './lib/2pract/ruby.csv')).to eq(6.1)
+		end
+		it "Dispers - true" do
+			# obj = Converter.new
+			expect(obj.computing_operation('4', './lib/2pract/ruby.csv')).to eq(6.1)
 		end
 	end
 end
