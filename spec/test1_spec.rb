@@ -29,18 +29,18 @@ RSpec.describe Converter do
   describe '#Valid convertation' do
     it '12 K to C' do
       # obj = Converter.new
-      obj.temperature = 12
-      expect(obj.kelvins_to_scale('C')).to eq(-261.15)
+      # obj.temperature = 12
+      expect(obj.kelvins_to_scale('C', 12)).to eq(-261.15)
     end
     it '45 F to K' do
       # obj = Converter.new
-      obj.temperature = 45
-      expect(obj.fars_to_scale('K')).to eq(280.3722222222222)
+      # obj.temperature = 45
+      expect(obj.fars_to_scale('K', 45)).to eq(280.3722222222222)
     end
     it '50 C to F' do
       # obj = Converter.new
-      obj.temperature = 50
-      expect(obj.cels_to_scale('F')).to eq(122.0)
+      # obj.temperature = 50
+      expect(obj.cels_to_scale('F', 50)).to eq(122.0)
     end
   end
 end
