@@ -100,14 +100,6 @@ class Calculate
   end
 end
 
-inp = Input.new
-obj = Converter.new
-
-inp.temperature = 120
-		inp.scale_f = 'C'
-		inp.scale_s = 'C'
-		p obj.convert(inp)
-
 # obj = Converter.new
 # p obj.valid_temperature?('120a')
 

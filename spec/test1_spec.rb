@@ -61,4 +61,5 @@ RSpec.describe Converter do
 		inp.scale_s = 'C'
 		expect(obj.convert(inp)).to eq(120.0)
     end
+   end
 end
