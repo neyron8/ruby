@@ -1,4 +1,5 @@
 require './lib/1pract/1practice'
+require './lib/1pract/input'
 
 RSpec.describe Converter do
   obj = Converter.new
