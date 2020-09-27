@@ -41,8 +41,7 @@ class Converter
     abort 'Invalid temperature' unless valid_temperature?(obj.temperature)
     abort "Invalid scale '#{obj.scale_f}' " unless valid_scale?(obj.scale_f)
     abort "Invalid scale '#{obj.scale_s}' " unless valid_scale?(obj.scale_s)
-    temperature = convert_to_scale(obj)
-    temperature
+    convert_to_scale(obj)
   end
 
   def cels_to_scale(scale_s, temperature)
