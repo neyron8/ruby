@@ -10,5 +10,8 @@ class Calculate
   end
 end
 
-obj = Calculate.new
-p obj.calculate
+ obj = Calculate.new
+ p obj.calculate
+# name = File.expand_path(File.dirname(__FILE__)) + '/ruby.csv' 
+# p name
+
