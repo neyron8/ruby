@@ -6,7 +6,7 @@ class Calculate
   def calculate
     obj = Input.new
     comp = Computing.new
-    comp.computing_operation(obj.choose_operation, 'ruby.csv')
+    comp.computing_operation(obj.choose_operation)
   end
 end
 

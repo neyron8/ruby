@@ -7,25 +7,25 @@ RSpec.describe Computing do
   describe '#Valid max' do
     it 'Max - true' do
       # obj = Converter.new
-      expect(obj.comp_max('./labs/lab2/lib/ruby.csv')).to eq(12.5)
+      expect(obj.comp_max).to eq(12.5)
     end
   end
   describe '#Valid average' do
     it 'Average - true' do
       # obj = Converter.new
-      expect(obj.comp_average('./labs/lab2/lib/ruby.csv')).to eq(8.23)
+      expect(obj.comp_average).to eq(8.23)
     end
   end
   describe '#Valid min' do
     it 'Min  - true' do
       # obj = Converter.new
-      expect(obj.comp_min('./labs/lab2/lib/ruby.csv')).to eq(6.1)
+      expect(obj.comp_min).to eq(6.1)
     end
   end
   describe '#Valid dispersion' do
     it 'Dispers - true' do
       # obj = Converter.new
-      expect(obj.comp_dispers('./labs/lab2/lib/ruby.csv')).to eq(2.98)
+      expect(obj.comp_dispers).to eq(2.98)
     end
   end
   describe '#Valid dispersion' do
@@ -53,19 +53,19 @@ RSpec.describe Computing do
   describe '#Valid computing operation' do
     it 'Min ' do
       # obj = Converter.new
-      expect(obj.computing_operation('1', './labs/lab2/lib/ruby.csv')).to eq(6.1)
+      expect(obj.computing_operation('1')).to eq(6.1)
     end
     it 'Max' do
       # obj = Converter.new
-      expect(obj.computing_operation('2', './labs/lab2/lib/ruby.csv')).to eq(12.5)
+      expect(obj.computing_operation('2')).to eq(12.5)
     end
     it 'Average' do
       # obj = Converter.new
-      expect(obj.computing_operation('3', './labs/lab2/lib/ruby.csv')).to eq(8.23)
+      expect(obj.computing_operation('3')).to eq(8.23)
     end
     it 'Dispers' do
       # obj = Converter.new
-      expect(obj.computing_operation('4', './labs/lab2/lib/ruby.csv')).to eq(2.98)
+      expect(obj.computing_operation('4')).to eq(2.98)
     end
   end
 end
