@@ -67,37 +67,37 @@ RSpec.describe Converter do
       # obj.temperature = 12
       expect(obj.convert_to_scale(50, 'C', 'F')).to eq(122.0)
     end
-	it '40 C to K' do
+    it '40 C to K' do
       # obj = Converter.new
       # obj.temperature = 12
       expect(obj.convert_to_scale(40, 'C', 'K')).to eq(313.15)
     end
-	it '14 F to C' do
+    it '14 F to C' do
       # obj = Converter.new
       # obj.temperature = 12
       expect(obj.convert_to_scale(14, 'F', 'C')).to eq(-10.0)
     end
-	it '14 F to K' do
+    it '14 F to K' do
       # obj = Converter.new
       # obj.temperature = 12
       expect(obj.convert_to_scale(14, 'F', 'K')).to eq(263.15)
     end
-	it '14 F to F' do
+    it '14 F to F' do
       # obj = Converter.new
       # obj.temperature = 12
       expect(obj.convert_to_scale(14, 'F', 'F')).to eq(14.0)
     end
-	it '14 K to C' do
+    it '14 K to C' do
       # obj = Converter.new
       # obj.temperature = 12
       expect(obj.convert_to_scale(14, 'K', 'C')).to eq(-259.15)
     end
-	it '568 K to F' do
+    it '568 K to F' do
       # obj = Converter.new
       # obj.temperature = 12
       expect(obj.convert_to_scale(568, 'K', 'F')).to eq(562.73)
     end
-	it '568 K to K' do
+    it '568 K to K' do
       # obj = Converter.new
       # obj.temperature = 12
       expect(obj.convert_to_scale(568, 'K', 'K')).to eq(568.0)
