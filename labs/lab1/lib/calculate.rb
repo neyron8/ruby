@@ -8,14 +8,15 @@ class Calculate
   def calculate
     obj = Input.new
     conv = Converter.new
-    obj.set_variables
-    p conv.convert(obj)
+    temperature = obj.set_temperature
+    scale_f = obj.set_scale
+    scale_s = obj.set_scale
+    abort 'Invalid temperature' unless conv.valid_temperature?(temperature)
+    abort "Invalid scale '#{scale_f}' " unless conv.valid_scale?(scale_f)
+    abort "Invalid scale '#{scale_s}' " unless conv.valid_scale?(scale_s)
+    convertation = conv.convert_to_scale(temperature, scale_f, scale_s)
   end
 end
 
-obj = Calculate.new
-obj.calculate
-# ob = Converter.new
-# ob1 = Input.new
-# ob1.temperature = gets.chomp!
-# p ob.valid_temperature?(ob1.temperature)
+obj1 = Calculate.new
+p obj1.calculate

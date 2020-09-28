@@ -1,7 +1,3 @@
-load 'input.rb'
-# for tests
-# require './input' # for checking program(not tests)
-
 class Converter
   def valid_scale?(scale)
     %w[C F K].include? scale
@@ -14,13 +10,6 @@ class Converter
     else
       false
     end
-  end
-
-  def convert(obj)
-    abort 'Invalid temperature' unless valid_temperature?(obj.temperature)
-    abort "Invalid scale '#{obj.scale_f}' " unless valid_scale?(obj.scale_f)
-    abort "Invalid scale '#{obj.scale_s}' " unless valid_scale?(obj.scale_s)
-    convert_to_scale(obj)
   end
 
   def cels_to_scale(scale_s, temperature)
@@ -56,14 +45,17 @@ class Converter
     end
   end
 
-  def convert_to_scale(obj)
-    case obj.scale_f
+  def convert_to_scale(temperature, scale_f, scale_s)
+    return temperature.to_f if scale_f == scale_s
+
+    case scale_f
     when 'C'
-      cels_to_scale(obj.scale_s, obj.temperature)
+      convertation = cels_to_scale(scale_s, temperature)
+    when 'K'
+      convertation = kelvins_to_scale(scale_s, temperature)
     when 'F'
-      fars_to_scale(obj.scale_s, obj.temperature)
-    else
-      kelvins_to_scale(obj.scale_s, obj.temperature)
+      convertation = fars_to_scale(scale_s, temperature)
     end
+    convertation
   end
 end
