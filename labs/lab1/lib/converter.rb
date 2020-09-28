@@ -1,5 +1,4 @@
 class Converter
-
   def cels_to_scale(scale_s, temperature)
     case scale_s
     when 'C'
