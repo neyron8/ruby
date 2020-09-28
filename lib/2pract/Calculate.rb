@@ -1,5 +1,5 @@
 require './lib/2pract/input' # for tests
-require './lib/2pract/iomputing' # for tests
+require './lib/2pract/computing' # for tests
 # require './input' # for checking program(not tests)
 # require './computing' # for checking program(not tests)
 

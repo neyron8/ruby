@@ -1,8 +1,8 @@
 require './lib/1pract/input' # for tests
 require './lib/1pract/converter' # for tests
 
-# require './Input' # for checking program(not tests)
-# require './Converter' # for checking program(not tests)
+# require './input' # for checking program(not tests)
+# require './converter' # for checking program(not tests)
 
 class Calculate
   def calculate
