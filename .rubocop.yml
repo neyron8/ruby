@@ -12,7 +12,7 @@ Metrics/MethodLength:
   
 Metrics/BlockLength:
   Exclude:
-    - 'spec/**/*.rb'
+    - 'labs/lab1/spec/*.rb'
   
 Layout/EndOfLine:
   EnforcedStyle: lf
