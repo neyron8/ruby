@@ -9,14 +9,6 @@ RSpec.describe Converter do
       # obj = Converter.new
       expect(obj.valid_scale?('C')).to eq(true)
     end
-	it "Checking 'K' - true" do
-      # obj = Converter.new
-      expect(obj.valid_scale?('K')).to eq(true)
-    end
-    it "Checking 'Q' - false" do
-      # obj = Converter.new
-      expect(obj.valid_scale?('Q')).to eq(false)
-    end
   end
   describe '#Valid Temperature' do
     it "Checking '120' - 120.0" do
