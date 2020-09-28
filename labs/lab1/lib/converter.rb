@@ -1,4 +1,17 @@
 class Converter
+  def valid_scale?(scale)
+    %w[C F K].include? scale
+  end
+
+  def valid_temperature?(temperature)
+    reg_digit = '^[+-]?([1-9]\d*|0)(\.\d+)?$'
+    if temperature.to_s.match(reg_digit)
+      true
+    else
+      false
+    end
+  end
+
   def cels_to_scale(scale_s, temperature)
     case scale_s
     when 'C'
