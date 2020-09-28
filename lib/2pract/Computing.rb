@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require 'csv'
-require './lib/2pract/Input' # for tests
-# require './Input' # for checking program(not tests)
+require './lib/2pract/input' # for tests
+# require './input' # for checking program(not tests)
 
 # Comp operations
 class Computing

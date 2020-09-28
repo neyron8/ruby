@@ -1,5 +1,5 @@
-require './lib/1pract/Input' # for tests
-# require './Input' # for checking program(not tests)
+require './lib/1pract/input' # for tests
+# require './input' # for checking program(not tests)
 
 class Converter
   def valid_scale?(scale)
