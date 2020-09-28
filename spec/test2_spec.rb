@@ -1,5 +1,5 @@
-require './lib/2pract/input'
-require './lib/2pract/2practice'
+require './lib/2pract/Input'
+require './lib/2pract/Computing'
 require 'csv'
 
 RSpec.describe Computing do
