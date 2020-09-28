@@ -14,7 +14,7 @@ class Calculate
     abort 'Invalid temperature' unless conv.valid_temperature?(temperature)
     abort "Invalid scale '#{scale_f}' " unless conv.valid_scale?(scale_f)
     abort "Invalid scale '#{scale_s}' " unless conv.valid_scale?(scale_s)
-    convertation = conv.convert_to_scale(temperature, scale_f, scale_s)
+    conv.convert_to_scale(temperature, scale_f, scale_s)
   end
 end
 
