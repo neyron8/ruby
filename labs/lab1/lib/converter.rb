@@ -1,4 +1,5 @@
-require './lib/1pract/input' # for tests
+load 'input.rb'
+# for tests
 # require './input' # for checking program(not tests)
 
 class Converter

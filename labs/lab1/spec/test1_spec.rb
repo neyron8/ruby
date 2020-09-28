@@ -1,5 +1,5 @@
-require './lib/1pract/converter'
-require './lib/1pract/input'
+require './lib/input'
+require './lib/converter'
 
 RSpec.describe Converter do
   obj = Converter.new
@@ -55,11 +55,6 @@ RSpec.describe Converter do
       # obj = Converter.new
       # obj.temperature = 50
       expect(obj.cels_to_scale('F', 50)).to eq(122.0)
-    end
-	it '50 C to F' do
-      # obj = Converter.new
-      # obj.temperature = 50
-      expect(obj.cels_to_scale('FDS', 50)).to eq(122.0)
     end
   end
   describe '#Valid convertation(object)' do

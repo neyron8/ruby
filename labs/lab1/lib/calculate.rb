@@ -1,5 +1,5 @@
-require './lib/1pract/input' # for tests
-require './lib/1pract/converter' # for tests
+load 'input.rb'
+load 'converter.rb'
 
 # require './input' # for checking program(not tests)
 # require './converter' # for checking program(not tests)

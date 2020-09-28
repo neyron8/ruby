@@ -1,7 +1,5 @@
 AllCops:
   NewCops: enable
-  Exclude:
-    - 'spec/*.rb'
 
 Style/Documentation:
   Enabled: false
@@ -11,6 +9,10 @@ Style/FrozenStringLiteralComment:
 
 Metrics/MethodLength:
   Max: 20
+  
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*_spec.rb'
   
 Layout/EndOfLine:
   EnforcedStyle: lf
