@@ -1,5 +1,7 @@
 AllCops:
   NewCops: enable
+    Exclude:
+    - 'labs/lab1/spec/*.rb'
 
 Style/Documentation:
   Enabled: false
