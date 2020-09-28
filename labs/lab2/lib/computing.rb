@@ -6,7 +6,7 @@ load 'input.rb'
 # Comp operations
 class Computing
   def comp_max
-	name = File.expand_path(File.dirname(__FILE__)) + '/ruby.csv' 
+    name = "#{__dir__}/ruby.csv"
     table = CSV.read(name, col_sep: ';', headers: true, converters: :numeric)
     @max = table[0][1]
     CSV.foreach(name, col_sep: ';', headers: true, converters: :numeric) do |(_x, y)|
@@ -16,7 +16,7 @@ class Computing
   end
 
   def comp_min
-	name = File.expand_path(File.dirname(__FILE__)) + '/ruby.csv' 
+    name = "#{__dir__}/ruby.csv"
     table = CSV.read(name, col_sep: ';', headers: true, converters: :numeric)
     @min = table[0][1]
 
@@ -29,7 +29,7 @@ class Computing
   def comp_average
     @sum = 0
     @n = 0
-	name = File.expand_path(File.dirname(__FILE__)) + '/ruby.csv'
+    name = "#{__dir__}/ruby.csv"
     CSV.foreach(name, col_sep: ';', headers: true, converters: :numeric) do |(_x, y)|
       @sum += y[1]
       @n += 1
@@ -40,7 +40,7 @@ class Computing
   def comp_dispers
     @average = comp_average
     @n = 0
-	name = File.expand_path(File.dirname(__FILE__)) + '/ruby.csv'
+    name = "#{__dir__}/ruby.csv"
     CSV.foreach(name, col_sep: ';', headers: true, converters: :numeric) do |(_x, y)|
       @sum += (y[1] - @average)**2
       @n += 1
