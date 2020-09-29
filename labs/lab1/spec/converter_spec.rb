@@ -35,7 +35,7 @@ RSpec.describe Converter do
     end
 
     it '568 K to F' do
-      expect(Converter.kelvins_to_scale('C', 568)).to eq 562.73
+      expect(Converter.kelvins_to_scale('F', 568)).to eq 562.73
     end
 
     it '45 F to K' do
