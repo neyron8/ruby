@@ -30,30 +30,6 @@ RSpec.describe Converter do
       expect(Converter.valid_temperature?('10k')).to eq false
     end
 
-    it '12 K to C' do
-      expect(Converter.kelvins_to_scale('C', 12)).to eq(-261.15)
-    end
-
-    it '568 K to F' do
-      expect(Converter.kelvins_to_scale('F', 568)).to eq 562.73
-    end
-
-    it '45 F to K' do
-      expect(Converter.fars_to_scale('K', 45)).to eq(280.3722222222222)
-    end
-
-    it '14 F to C' do
-      expect(Converter.fars_to_scale('C', 14)).to eq(-10.0)
-    end
-
-    it '50 C to F' do
-      expect(Converter.cels_to_scale('F', 50)).to eq 122.0
-    end
-
-    it '50 C to K' do
-      expect(Converter.cels_to_scale('K', 40)).to eq 313.15
-    end
-
     it '120 C to C convert to scale' do
       expect(Converter.convert_to_scale(120, 'C', 'C')).to eq 120.0
     end
