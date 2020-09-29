@@ -15,7 +15,7 @@ RSpec.describe Converter do
     end
 
     it 'Valid scale Q -> false' do
-      expect(Converter.valid_scale?('K')).to eq false
+      expect(Converter.valid_scale?('Q')).to eq false
     end
 
     it 'Valid temperature - 120 -> true' do
@@ -31,15 +31,15 @@ RSpec.describe Converter do
     end
 
     it '12 K to C' do
-      it { expect(Converter.kelvins_to_scale('C', 12)).to eq(-261.15) }
+      expect(Converter.kelvins_to_scale('C', 12)).to eq(-261.15)
     end
 
     it '568 K to F' do
-      it { expect(Converter.kelvins_to_scale('C', 568)).to eq 562.73 }
+      expect(Converter.kelvins_to_scale('C', 568)).to eq 562.73
     end
 
     it '45 F to K' do
-      it { expect(Converter.fars_to_scale('K', 45)).to eq(280.3722222222222) }
+      expect(Converter.fars_to_scale('K', 45)).to eq(280.3722222222222)
     end
 
     it '14 F to C' do
