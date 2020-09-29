@@ -1,9 +1,9 @@
 class Converter
-  def valid_scale?(scale)
+  def self.valid_scale?(scale)
     %w[C F K].include? scale
   end
 
-  def valid_temperature?(temperature)
+  def self.valid_temperature?(temperature)
     reg_digit = '^[+-]?([1-9]\d*|0)(\.\d+)?$'
     if temperature.to_s.match(reg_digit)
       true
@@ -12,7 +12,7 @@ class Converter
     end
   end
 
-  def cels_to_scale(scale_s, temperature)
+  def self.cels_to_scale(scale_s, temperature)
     case scale_s
     when 'F'
       (temperature.to_f * 1.8 + 32)
@@ -21,7 +21,7 @@ class Converter
     end
   end
 
-  def fars_to_scale(scale_s, temperature)
+  def self.fars_to_scale(scale_s, temperature)
     case scale_s
     when 'C'
       (temperature.to_f - 32) / 1.8
@@ -30,7 +30,7 @@ class Converter
     end
   end
 
-  def kelvins_to_scale(scale_s, temperature)
+  def self.kelvins_to_scale(scale_s, temperature)
     case scale_s
     when 'C'
       temperature.to_f - 273.15
@@ -39,7 +39,7 @@ class Converter
     end
   end
 
-  def convert_to_scale(temperature, scale_f, scale_s)
+  def self.convert_to_scale(temperature, scale_f, scale_s)
     return temperature.to_f if scale_f == scale_s
 
     case scale_f
