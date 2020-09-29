@@ -1,4 +1,3 @@
-require './lib/input'
 require './lib/converter'
 
 RSpec.describe Converter do
@@ -15,6 +14,10 @@ RSpec.describe Converter do
     it "Checking 'Q' - false" do
       # obj = Converter.new
       expect(obj.valid_scale?('Q')).to eq(false)
+    end
+    it "Checking 'F' - true" do
+      # obj = Converter.new
+      expect(obj.valid_scale?('F')).to eq(true)
     end
   end
   describe '#Valid Temperature' do
@@ -45,15 +48,30 @@ RSpec.describe Converter do
       # obj.temperature = 12
       expect(obj.kelvins_to_scale('C', 12)).to eq(-261.15)
     end
+    it '568 K to F' do
+      # obj = Converter.new
+      # obj.temperature = 12
+      expect(obj.kelvins_to_scale('F', 568)).to eq(562.73)
+    end
     it '45 F to K' do
       # obj = Converter.new
       # obj.temperature = 45
       expect(obj.fars_to_scale('K', 45)).to eq(280.3722222222222)
     end
+    it '14 F to C' do
+      # obj = Converter.new
+      # obj.temperature = 45
+      expect(obj.fars_to_scale('C', 14)).to eq(-10.0)
+    end
     it '50 C to F' do
       # obj = Converter.new
       # obj.temperature = 50
       expect(obj.cels_to_scale('F', 50)).to eq(122.0)
+    end
+    it '50 C to K' do
+      # obj = Converter.new
+      # obj.temperature = 50
+      expect(obj.cels_to_scale('K', 40)).to eq(313.15)
     end
   end
   describe '#Valid convertation(object)' do
