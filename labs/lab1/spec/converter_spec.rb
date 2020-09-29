@@ -1,7 +1,11 @@
 require './lib/converter'
 
 RSpec.describe Converter do
-  obj = Converter.new
+  describe '.converter' do
+    context 'from CELSIUS to FAHRENHEIT' do
+      it { expect(Converter.valid_scale?('C')).to eq true }
+    end
+  end
   describe '#Valid Scale' do
     it "Checking 'C' - true" do
       # obj = Converter.new
