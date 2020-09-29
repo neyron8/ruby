@@ -6,8 +6,6 @@ load 'converter.rb'
 
 class Calculate
   def self.calculate
-    obj = Input.new
-    conv = Converter.new
     temperature = Input.set_temperature
     scale_f = Input.set_scale
     scale_s = Input.set_scale
