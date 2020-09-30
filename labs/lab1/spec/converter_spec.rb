@@ -14,7 +14,7 @@ RSpec.describe Converter do
       expect(Converter.valid_scale?('F')).to eq true
     end
 
-    it 'Unvalid scale Q' do
+    it 'Invalid scale Q' do
       expect(Converter.valid_scale?('Q')).to eq false
     end
 
@@ -22,11 +22,11 @@ RSpec.describe Converter do
       expect(Converter.valid_temperature?('120')).to eq true
     end
 
-    it 'Unvalid temperature - q12' do
+    it 'Invalid temperature - q12' do
       expect(Converter.valid_temperature?('q12')).to eq false
     end
 
-    it 'Unvalid temperature - 10k' do
+    it 'Invalid temperature - 10k' do
       expect(Converter.valid_temperature?('10k')).to eq false
     end
 

@@ -19,7 +19,7 @@ RSpec.describe Computing do
       expect(Computing.valid_operation?('4')).to eq true
     end
 
-    it 'Unvalid operation 5' do
+    it 'Invalid operation 5' do
       expect(Computing.valid_operation?('5')).to eq false
     end
 
