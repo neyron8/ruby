@@ -1,11 +1,10 @@
 # frozen_string_literal: true
 
 require 'csv'
-load 'input.rb'
 
 # Comp operations
 class Computing
-  def comp_max
+  def self.comp_max
     name = "#{__dir__}/ruby.csv"
     table = CSV.read(name, col_sep: ';', headers: true, converters: :numeric)
     @max = table[0][1]
@@ -15,7 +14,7 @@ class Computing
     @max
   end
 
-  def comp_min
+  def self.comp_min
     name = "#{__dir__}/ruby.csv"
     table = CSV.read(name, col_sep: ';', headers: true, converters: :numeric)
     @min = table[0][1]
@@ -26,7 +25,7 @@ class Computing
     @min.round(2)
   end
 
-  def comp_average
+  def self.comp_average
     @sum = 0
     @n = 0
     name = "#{__dir__}/ruby.csv"
@@ -37,7 +36,7 @@ class Computing
     (@sum /= @n).round(2)
   end
 
-  def comp_dispers
+  def self.comp_dispers
     @average = comp_average
     @n = 0
     name = "#{__dir__}/ruby.csv"
@@ -48,7 +47,7 @@ class Computing
     (@sum /= @n - 1).round(2)
   end
 
-  def computing_operation(operation)
+  def self.computing_operation(operation)
     abort "Invalid operation number '#{operation}' " unless valid_operation?(operation)
     case operation
     when '1'
@@ -62,7 +61,7 @@ class Computing
     end
   end
 
-  def valid_operation?(operation)
+  def self.valid_operation?(operation)
     %w[1 2 3 4].include? operation
   end
 end

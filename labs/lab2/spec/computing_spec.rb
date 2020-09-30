@@ -1,71 +1,56 @@
-load 'input.rb'
 load 'computing.rb'
 require 'csv'
 
 RSpec.describe Computing do
-  obj = Computing.new
-  describe '#Valid max' do
-    it 'Max - true' do
-      # obj = Converter.new
-      expect(obj.comp_max).to eq(12.5)
-    end
+  it 'Comp max' do
+    expect(Converter.comp_max).to eq 12.5
   end
-  describe '#Valid average' do
-    it 'Average - true' do
-      # obj = Converter.new
-      expect(obj.comp_average).to eq(8.23)
-    end
+
+  it 'Comp average' do
+    expect(Converter.comp_average).to eq 8.23
   end
-  describe '#Valid min' do
-    it 'Min  - true' do
-      # obj = Converter.new
-      expect(obj.comp_min).to eq(6.1)
-    end
+
+  it 'Comp min' do
+    expect(Converter.comp_min).to eq 6.1
   end
-  describe '#Valid dispersion' do
-    it 'Dispers - true' do
-      # obj = Converter.new
-      expect(obj.comp_dispers).to eq(2.98)
-    end
+
+  it 'Comp dispers' do
+    expect(Converter.comp_dispers).to eq 2.98
   end
-  describe '#Valid dispersion' do
-    it 'Operation 1 - true' do
-      # obj = Converter.new
-      expect(obj.valid_operation?('1')).to eq(true)
-    end
-    it 'Operation 2 - true' do
-      # obj = Converter.new
-      expect(obj.valid_operation?('2')).to eq(true)
-    end
-    it 'Operation 3 - true' do
-      # obj = Converter.new
-      expect(obj.valid_operation?('3')).to eq(true)
-    end
-    it 'Operation 4 - true' do
-      # obj = Converter.new
-      expect(obj.valid_operation?('4')).to eq(true)
-    end
-    it 'Operation 5 - true' do
-      # obj = Converter.new
-      expect(obj.valid_operation?('5')).to eq(false)
-    end
+
+  it 'Valid operation 1 - true' do
+    expect(Converter.valid_operation?('1')).to eq true
   end
-  describe '#Valid computing operation' do
-    it 'Min ' do
-      # obj = Converter.new
-      expect(obj.computing_operation('1')).to eq(6.1)
-    end
-    it 'Max' do
-      # obj = Converter.new
-      expect(obj.computing_operation('2')).to eq(12.5)
-    end
-    it 'Average' do
-      # obj = Converter.new
-      expect(obj.computing_operation('3')).to eq(8.23)
-    end
-    it 'Dispers' do
-      # obj = Converter.new
-      expect(obj.computing_operation('4')).to eq(2.98)
-    end
+
+  it 'Valid operation 2 - true' do
+    expect(Converter.valid_operation?('2')).to eq true
+  end
+
+  it 'Valid operation 3 - true' do
+    expect(Converter.valid_operation?('3')).to eq true
+  end
+
+  it 'Valid operation 4 - true' do
+    expect(Converter.valid_operation?('4')).to eq true
+  end
+
+  it 'Valid operation 5 - true' do
+    expect(Converter.valid_operation?('5')).to eq false
+  end
+
+  it 'Computing min operation' do
+    expect(Converter.computing_operation('1')).to eq 6.1
+  end
+
+  it 'Computing max operation' do
+    expect(Converter.computing_operation('2')).to eq 12.5
+  end
+
+  it 'Computing average operation' do
+    expect(Converter.computing_operation('3')).to eq 8.23
+  end
+
+  it 'Computing dispers operation' do
+    expect(Converter.computing_operation('4')).to eq 2.98
   end
 end
