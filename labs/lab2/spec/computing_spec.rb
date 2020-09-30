@@ -2,22 +2,6 @@ load 'computing.rb'
 require 'csv'
 
 RSpec.describe Computing do
-  it 'Comp max' do
-    expect(Computing.comp_max).to eq 12.5
-  end
-
-  it 'Comp average' do
-    expect(Computing.comp_average).to eq 8.23
-  end
-
-  it 'Comp min' do
-    expect(Computing.comp_min).to eq 6.1
-  end
-
-  it 'Comp dispers' do
-    expect(Computing.comp_dispers).to eq 2.98
-  end
-
   it 'Valid operation 1 - true' do
     expect(Computing.valid_operation?('1')).to eq true
   end
