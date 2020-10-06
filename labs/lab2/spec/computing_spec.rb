@@ -2,41 +2,47 @@ load 'computing.rb'
 require 'csv'
 
 RSpec.describe Computing do
-  describe '.computing' do
-    it 'Valid operation 1' do
-      expect(Computing.valid_operation?('1')).to eq true
+  obj do
+    Computing.new
+  end
+
+  describe '#valid_operation?' do
+    context 'Input value - 1, number in range' do
+      it { expect(obj.valid_operation?('1')).to eq true }
     end
 
-    it 'Valid operation 2' do
-      expect(Computing.valid_operation?('2')).to eq true
+    context 'Input value - 2, number in range' do
+      it { expect(obj.valid_operation?('2')).to eq true }
     end
 
-    it 'Valid operation 3' do
-      expect(Computing.valid_operation?('3')).to eq true
+    context 'Input value - 3, number in range' do
+      it { expect(obj.valid_operation?('3')).to eq true }
     end
 
-    it 'Valid operation 4' do
-      expect(Computing.valid_operation?('4')).to eq true
+    context 'Input value - 4, number in range' do
+      it { expect(obj.valid_operation?('4')).to eq true }
     end
 
-    it 'Invalid operation 5' do
-      expect(Computing.valid_operation?('5')).to eq false
+    context 'Input value - 5, number not in range' do
+      it { expect(obj.valid_operation?('5')).to eq false }
+    end
+  end
+
+  describe '#computing_operation' do
+    context 'Computing min' do
+      it { expect(obj.computing_operation('1')).to eq 6.1 }
     end
 
-    it 'Computing min' do
-      expect(Computing.computing_operation('1')).to eq 6.1
+    context 'Computing max' do
+      it { expect(obj.computing_operation('2')).to eq 12.5 }
     end
 
-    it 'Computing max' do
-      expect(Computing.computing_operation('2')).to eq 12.5
+    context 'Computing average' do
+      it { expect(obj.computing_operation('3')).to eq 8.23 }
     end
 
-    it 'Computing average' do
-      expect(Computing.computing_operation('3')).to eq 8.23
-    end
-
-    it 'Computing dispers' do
-      expect(Computing.computing_operation('4')).to eq 2.65
+    context 'Computing dispers' do
+      it { expect(obj.computing_operation('4')).to eq 2.65 }
     end
   end
 end
