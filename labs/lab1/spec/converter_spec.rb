@@ -2,7 +2,7 @@ require './lib/converter'
 
 RSpec.describe Converter do
   describe '#valid_scale?' do
-    context 'Input value - С, true type' do
+    context 'Input value - C, true type' do
       it { expect(Converter.valid_scale?('C')).to eq true }
     end
 
@@ -15,7 +15,7 @@ RSpec.describe Converter do
     end
 
     context 'Input value - Q, false type' do
-      it { expect(Converter.valid_scale?('C')).to eq false }
+      it { expect(Converter.valid_scale?('Q')).to eq false }
     end
   end
 
