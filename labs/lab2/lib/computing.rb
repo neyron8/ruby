@@ -4,50 +4,36 @@ require 'csv'
 
 # Comp operations
 class Computing
-  def self.comp_max
+  def initialize
     name = "#{__dir__}/ruby.csv"
-    table = CSV.read(name, col_sep: ';', headers: true, converters: :numeric)
-    @max = table[0][1]
-    CSV.foreach(name, col_sep: ';', headers: true, converters: :numeric) do |(_x, y)|
-      @max = y[1] if @max < y[1]
+    @arr = []
+    CSV.foreach(name, col_sep: ';') do |a|
+      @arr << a[1].to_f
     end
-    @max
+    @arr.shift
   end
 
-  def self.comp_min
-    name = "#{__dir__}/ruby.csv"
-    table = CSV.read(name, col_sep: ';', headers: true, converters: :numeric)
-    @min = table[0][1]
-
-    CSV.foreach(name, col_sep: ';', headers: true, converters: :numeric) do |(_x, y)|
-      @min = y[1] if @min > y[1]
-    end
-    @min.round(2)
+  def comp_max
+    @arr.max
   end
 
-  def self.comp_average
-    @sum = 0
-    @n = 0
-    name = "#{__dir__}/ruby.csv"
-    CSV.foreach(name, col_sep: ';', headers: true, converters: :numeric) do |(_x, y)|
-      @sum += y[1]
-      @n += 1
-    end
-    (@sum /= @n).round(2)
+  def comp_min
+    @arr.min.round(2)
   end
 
-  def self.comp_dispers
-    @average = comp_average
-    @n = 0
-    name = "#{__dir__}/ruby.csv"
-    CSV.foreach(name, col_sep: ';', headers: true, converters: :numeric) do |(_x, y)|
-      @sum += (y[1] - @average)**2
-      @n += 1
-    end
-    (@sum /= @n - 1).round(2)
+  def comp_average
+    (@arr.sum / @arr.size).round(2)
   end
 
-  def self.computing_operation(operation)
+  def comp_dispers
+    avg = comp_average
+    iter = @arr.map { |a| (a - avg)**2 }
+    iter = iter.sum
+    iter /= @arr.length - 1
+    iter.round(2)
+  end
+
+  def computing_operation(operation)
     abort "Invalid operation number '#{operation}' " unless valid_operation?(operation)
     case operation
     when '1'
@@ -61,7 +47,7 @@ class Computing
     end
   end
 
-  def self.valid_operation?(operation)
+  def valid_operation?(operation)
     %w[1 2 3 4].include? operation
   end
 end

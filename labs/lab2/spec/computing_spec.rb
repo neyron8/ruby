@@ -36,7 +36,7 @@ RSpec.describe Computing do
     end
 
     it 'Computing dispers' do
-      expect(Computing.computing_operation('4')).to eq 2.98
+      expect(Computing.computing_operation('4')).to eq 2.65
     end
   end
 end
