@@ -10,6 +10,3 @@ class Calculate
     a.computing_operation(Input.choose_operation)
   end
 end
-
-at = Calculate.new
-p at.calculate
