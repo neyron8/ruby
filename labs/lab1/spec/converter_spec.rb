@@ -1,34 +1,6 @@
 require './lib/converter'
 
 RSpec.describe Converter do
-  describe '#valid_scale?' do
-    context 'Input value - C true' do
-      it { expect(Converter.valid_scale?('C')).to eq true }
-    end
-
-    context 'Input value - K true' do
-      it { expect(Converter.valid_scale?('K')).to eq true }
-    end
-
-    context 'Input value - F true' do
-      it { expect(Converter.valid_scale?('F')).to eq true }
-    end
-
-    context 'Input value - Q false' do
-      it { expect(Converter.valid_scale?('Q')).to eq false }
-    end
-  end
-
-  describe '#valid_temperature?' do
-    context 'Input temperature true' do
-      it { expect(Converter.valid_temperature?('120')).to eq true }
-    end
-
-    context 'Input temperature false' do
-      it { expect(Converter.valid_temperature?('q12')).to eq false }
-    end
-  end
-
   describe '.convert_to_scale' do
     context 'C to C' do
       it { expect(Converter.convert_to_scale(120, 'C', 'C')).to eq 120.0 }
@@ -59,7 +31,7 @@ RSpec.describe Converter do
     end
 
     context 'K to K' do
-      it { expect(Converter.convert_to_scale(568, 'K', 'K')).to eq(568.0) }
+      it { expect(Converter.convert_to_scale(568, 'K', 'K')).to eq 568.0 }
     end
   end
 end
