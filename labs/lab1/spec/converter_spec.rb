@@ -1,7 +1,7 @@
 require './lib/converter'
 
 RSpec.describe Converter do
-  describe '.convert_to_scale' do
+  describe '.converter' do
     context 'C to C' do
       it { expect(Converter.convert_to_scale(120, 'C', 'C')).to eq 120.0 }
     end
