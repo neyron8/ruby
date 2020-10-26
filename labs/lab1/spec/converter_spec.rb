@@ -1,7 +1,7 @@
 require './lib/converter'
 
 RSpec.describe Converter do
-  describe '.valid_scale?' do
+  describe '#valid_scale?' do
     context 'Input value - C true' do
       it { expect(Converter.valid_scale?('C')).to eq true }
     end
@@ -19,7 +19,7 @@ RSpec.describe Converter do
     end
   end
 
-  describe '.valid_temperature?' do
+  describe '#valid_temperature?' do
     context 'Input temperature true' do
       it { expect(Converter.valid_temperature?('120')).to eq true }
     end
